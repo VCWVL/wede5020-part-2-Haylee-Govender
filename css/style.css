@@ -1,0 +1,93 @@
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 600px; /* adjust as needed */
+    
+}
+
+/* Slides */
+.carousel-slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+   
+    object-fit: fill;
+    background: #cfe2ff; /* optional: matches banner background */
+}
+
+/* Slide text content */
+.carousel-content {
+    position: absolute;
+    bottom: 100px;
+    right: 50px;   /* Move to right */
+    left: auto;    /* Remove left alignment */  
+    color: #fff;
+}
+
+.carousel-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.shop-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0f5c5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

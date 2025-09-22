@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCCER CENTRAL</title>
+</head>
+<body>
+    <div>
+        Welcome to Soccer Central &nbsp;&nbsp;&nbsp;
+        <a href="index.html">Home</a> |
+        <a href="products.html">Products</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <hr>
+
+    <h1>Soccer Central</h1>
+   <!-- Filter Bar -->
+  <div class="filter-bar">
+    <label for="Category">Category:</label>
+    <select id="category" onchange="filterItems()">
+      <option value="all">All</option>
+      <option value="fan gear">Fan Gear</option>
+      <option value="boots">Boots</option>
+    </select>
+
+    <!-- Soccer Grid -->
+  <div class="soccer-grid" id="soccerGrid">
+    <!-- Item 1 -->
+    <div class="soccer-card" 
+         data-category="clothing">
+      <img src="_images/scc_1.jpg" alt="Jersey">
+      <h3>Real Madrid Jersey</h3>
+      <p class="price">R599.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 2 -->
+    <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_2.jpg" alt="Jersey">
+      <h3>Messi Jersey</h3>
+      <p class="price">R899.99</p>
+      <button>Add to Cart</button>
+    
+    </div>
+    <!-- Item 3 -->
+    <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_3.jpg" alt="Jersey">
+      <h3>Real Madrid Mbappe Jersey</h3>
+      <p class="price">R1299.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 4 -->
+    <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_4.jpg" alt="Jersey">
+      <h3>Man unitied Jersey</h3>
+      <p class="price">R1599.99</p>
+      <button>Add to Cart</button>  
+    </div>
+    <!-- Item 5 -->
+    <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_5.jpg" alt="Jersey">
+      <h3>Man unitied Jersey</h3>
+      <p class="price">R1999.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 6 -->
+    <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_6.jpg" alt="Jersey">
+      <h3>Juventus Jersey</h3>
+      <p class="price">R2499.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 7 -->
+      <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_7.jpg" alt="Jersey">
+      <h3>Juventus Jersey</h3>
+      <p class="price">R2499.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 8 -->
+      <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_8.jpg" alt="Jersey">
+      <h3>Manchester City Jersey</h3>
+      <p class="price">R2499.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 9 -->
+      <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_9.jpg" alt="Jersey">
+      <h3>Arsenal Jersey</h3>
+      <p class="price">R1299.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 10 -->
+      <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_10.jpg" alt="Jersey">
+      <h3>Real Madrid Jersey</h3>
+      <p class="price">R1199.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Item 11 -->
+      <div class="soccer-card"
+         data-category="Fan Gear">
+      <img src="_images/scc_11.jpg" alt="Jersey">
+      <h3>Paris Jersey</h3>
+      <p class="price">R999.99</p>
+      <button>Add to Cart</button>    
+    </div>
+    <!-- Item 12 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s1.jpg" alt="Boots">
+      <h3>Nike boots</h3>
+      <p class="price">R1299.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 13 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s2.jpg" alt="Boots">
+      <h3>Nike Boots</h3>
+      <p class="price">R1599.99</p>
+      <button>Add to Cart</button>  
+    </div>
+    <!-- Item 14 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s3.jpg" alt="Boots">
+      <h3>Adidas Boots</h3>
+      <p class="price">R1999.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 15 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s4.jpg" alt="Boots">
+      <h3>Puma Boots</h3>
+      <p class="price">R2499.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 16 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s5.jpg" alt="Boots">
+      <h3>Nike Boots</h3>
+      <p class="price">R2999.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 17 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s6.jpg" alt="Boots">
+      <h3>Nike Boots</h3>
+      <p class="price">R1499.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 18 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s7.jpg" alt="Boots">
+      <h3>Nike Boots</h3>
+      <p class="price">R1999.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Item 19 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s8.jpg" alt="Boots">
+      <h3>Nike Boots</h3>
+      <p class="price">R2499.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Item 20 -->
+      <div class="soccer-card"
+         data-category="Boots">
+      <img src="_images/scc_s9.jpg" alt="Boots">
+      <h3>Nike Boots</h3>
+      <p class="price">R2999.99</p>
+      <button>Add to Cart</button>
+
+
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <p>&copy; 2025 Soccer Central. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
