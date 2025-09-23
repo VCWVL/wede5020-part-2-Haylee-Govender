@@ -104,7 +104,7 @@ Development Begins	                  1 Sep 2025
 
 Testing & Revisions	                  27 Sep 2025
 
-Launch	                              29 Sep 2025
+Launch	                              10 Oct 2025
 
 Part 1 Details - Html code
 
