@@ -4,38 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio 88 - Contact</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div>
-    Welcome to Studio 88 &nbsp;&nbsp;&nbsp;
-    <a href="index.html">Home</a> |
-    <a href="products.html">Products</a> |
-    <a href="enquiry.html">Enquiry</a> |
-    <a href="about.html">About Us</a> |
-    <a href="contact.html">Contact</a>
-  </div>
+  <header class="main-header">
+    <a href="index.html" class="logo-container">
+      <img src="_images/studiologo.jpg" alt="Studio 88 Logo" class="logo">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+  </header>
 
-  <hr>
-
-  <h1>Contact Us</h1>
-  <form>
-    <label>Your Name:</label><br>
-    <input type="Text" name="Name" required><br><br>
-
-    <label>Your Email:</label><br>
-    <input type="Email" name="email" required><br><br>
-
-    <label>Your Message:</label><br>
-    <textarea rows="4" name="message" required></textarea><br><br>
-
-    <button type="submit">Send Message</button>
-  </form>
-
-  <hr>
+  <main>
+    <h1>Contact Us</h1>
+    <form>
+      <label>Your Name:</label><br>
+      <input type="Text" name="Name" required><br><br>
+  
+      <label>Your Email:</label><br>
+      <input type="Email" name="email" required><br><br>
+  
+      <label>Your Message:</label><br>
+      <textarea rows="4" name="message" required></textarea><br><br>
+  
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+  
   <footer>
     <p>&copy; 2025 Studio 88. All Rights Reserved.</p>
   </footer>
 
+  <script src="js/auth.js"></script>
 </body>
 </html>

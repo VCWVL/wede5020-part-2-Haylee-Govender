@@ -4,52 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SALES </title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
-        Welcome to our special sales &nbsp;&nbsp;&nbsp;
-        <a href="index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="about.html">About Us</a> |
-        <a href="contact.html">Contact</a>
-    </div>
+    <header class="main-header">
+        <a href="index.html" class="logo-container">
+          <img src="_images/studiologo.jpg" alt="Studio 88 Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <hr>SALES <hr> 
-    <!--Sales -->
-  <div class="sales-grid" id="salesGrid">
-    <!-- Item 1 -->
-    <div class="sales-card" >
-      <img src="_images/asc_am2.jpg" alt="Hat">
-      <h3>Adidas Hat</h3>
-      <p class="price">R199.99</p>
-      <button>Add to Cart</button>
-    </div>
-    <!--Item 2-->
-    <div class="sales-card" >
-      <img src="_images/asc_nm11.jpg" alt="Bag">
-      <h3>Nike bag</h3>
-      <p class="price">R299.99</p>
-      <button>Add to Cart</button>
-    </div>
-    <!-- Item 3 -->
-    <div class="sales-card" >
-      <img src="_images/asc_pm2.jpg" alt="Cap">
-      <h3>Nike Cap</h3>
-      <p class="price">R99.99</p>
-      <button>Add to Cart</button>  
-
-    </div>
-    <!-- Item 4 -->
-    <div class="sales-card" >
-        <img src="_images/puma_sandalm2.jpg" alt="sandals">
-        <h3>Puma sandals</h3>
-        <p class="price">R249.99</p>
-        <button>Add to Cart</button>
-
-    <hr>
+    <main>
+        <h1 style="text-align: center;">SALES</h1>
+        <!--Sales -->
+        <div class="sales-grid" id="salesGrid">
+            <!-- Item 1 -->
+            <div class="sales-card">
+                <img src="_images/asc_am2.jpg" alt="Hat">
+                <h3>Adidas Hat</h3>
+                <p class="price">R199.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!--Item 2-->
+            <div class="sales-card">
+                <img src="_images/asc_nm11.jpg" alt="Bag">
+                <h3>Nike bag</h3>
+                <p class="price">R299.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Item 3 -->
+            <div class="sales-card">
+                <img src="_images/asc_pm2.jpg" alt="Cap">
+                <h3>Nike Cap</h3>
+                <p class="price">R99.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Item 4 -->
+            <div class="sales-card">
+                <img src="_images/puma_sandalm2.jpg" alt="sandals">
+                <h3>Puma sandals</h3>
+                <p class="price">R249.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2025 Soccer Central. All Rights Reserved.</p>
+        <p>&copy; 2025 Studio 88. All Rights Reserved.</p>
     </footer>
+    <script src="js/auth.js"></script>
 </body>
 </html>

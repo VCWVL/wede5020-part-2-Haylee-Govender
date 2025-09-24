@@ -1,3 +1,119 @@
+/* Header */
+.main-header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-header a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
+    margin-right: 15px;
+}
+
+.main-header .brand-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.main-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-header nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Grid for products, arrivals, sales */
+.product-grid, .new-grid, .sales-grid, .soccer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card, .new-card, .sales-card, .soccer-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img, .new-card img, .sales-card img, .soccer-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form Styling for Login/Sign Up */
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
 /* Carousel container */
 .carousel-container {
     position: relative;
