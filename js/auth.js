@@ -80,3 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const form = document.getElementById("contact-form");   
+const emailInput = document.getElementById("contact-email"); 
+const message = document.getElementById("form-message");    
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = emailInput.value.trim();
+  const regex = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+
+  if (!regex.test(email)) {
+    message.textContent = "❌ Please enter a valid email address.";
+    message.style.color = "red";
+  } else {
+    message.textContent = "✅ Thank you for contacting us! We will respond to you shortly.";
+    message.style.color = "limegreen";
+    form.reset();
+  }
+});
+

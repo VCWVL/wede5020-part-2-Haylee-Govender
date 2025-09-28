@@ -24,37 +24,92 @@
         </ul>
     </nav>
   </header>
+<main id="SignUp">
+  <div class="form-container">
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="signup-fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="signup-email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="signup-password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="signup-confirm-password" name="confirm-password" required>
+      </div>
+      <button type="submit" class="shop-now">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
 
-  <main>
-    <div class="form-container">
-      <h1>Sign Up</h1>
-      <form>
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
-        </div>
-        <button type="submit" class="shop-now" style="width: 100%; border: none;">Sign Up</button>
-      </form>
-      <p>Already have an account? <a href="login.html">Login</a></p>
-    </div>
-  </main>
+    <!-- Message display -->
+    <p id="signup-message" class="form-message"></p>
+  </div>
+</main>
+
   
-  <footer>
-    <p>&copy; 2025 Studio 88. All Rights Reserved.</p>
-  </footer>
+<footer class="footer">
+  <div class="footer-container">
 
-  <script src="js/auth.js"></script>
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="./_images/studiologo.jpg" alt="Studio 88 Logo">
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h3>SIGN UP TO OUR NEWSLETTER TO STAY UPDATED </h3>
+      <form id="newsletterForm">
+        <input type="email" id="emailInput" placeholder="Enter your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </div>
+
+  <!-- Links -->
+<div class="footer-links">
+  <div class="footer-column">
+    <h4>About Us</h4>
+    <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
+    <a href="about.html">Learn more</a>
+  </div>
+
+  <div class="footer-column">
+    <h4>Contact Us</h4>
+    <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
+    <a href="contact.html">Get in touch</a>
+  </div>
+</div>
+
+    <!-- Social Media -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/studio88_branded/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://x.com/Studio_88" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+
+  </div>
+
+  <div class= 'rights' >
+    <p>&copy; 2025 Studio 88. All Rights Reserved.</p>
+    
+  </div>
+</footer>
+
+
+  <script src="js/login.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </body>
 </html>
