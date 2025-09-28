@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio 88 - Home</title>
@@ -62,25 +63,151 @@
     </div>
   </div>
 
-  <!-- Navigation with heading side by side -->
-  <table width="100%">
-    <tr>
-      <td>
-        <a href="arrivals.html">New Arrivals</a> |
-        <a href="sale.html">Sale</a> |
-        <a href="soccer.html">Soccer Central</a>
-      </td>
-    </tr>
-  </table>
+<!-- ========================== -->
+<!-- CATEGORIES SECTION -->
+<!-- ========================== -->
+<section class="categories-section">
+  <div class="container">
+    <h2 class="categories-title">CATEGORIES</h2>
+
+    <div class="categories-grid">
+      <!-- MEN -->
+      <a href="products.html?gender=men" class="category-card">
+        <img src="_images/men.jpg" alt="Men">
+        <h3>MEN</h3>
+      </a>
+
+      <!-- WOMEN -->
+      <a href="products.html?gender=women" class="category-card">
+        <img src="_images/women.jpg" alt="Women">
+        <h3>WOMEN</h3>
+      </a>
+
+      <!-- ACCESSORIES -->
+      <a href="products.html?category=accessories" class="category-card">
+        <img src="_images/accessories.jpg" alt="Accessories">
+        <h3>ACCESSORIES</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="featured-section">
+  <div class="featured-container">
+    
+    <!-- New Arrivals -->
+    <div class="featured-item">
+      <h3>New Arrivals</h3>
+      <a href="arrivals.html">
+        <img src="./_images/air_jordanw1.jpg" alt="New Arrivals">
+      </a>
+    </div>
+
+    <!-- Sale -->
+    <div class="featured-item">
+      <h3>Sale</h3>
+      <a href="sale.html">
+        <img src="./_images/asc_am2.jpg" alt="Sale">
+      </a>
+    </div>
+
+    <!-- Soccer Central -->
+    <div class="featured-item">
+      <h3>Soccer Central</h3>
+      <a href="soccer.html">
+        <img src="./_images/scc_9.jpg" alt="Soccer Central">
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
   </main>
 
 
-  <footer>
-    <p>&copy; 2025 Studio 88. All Rights Reserved.</p>
-  </footer>
+<footer class="footer">
+  <div class="footer-container">
 
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="./_images/studiologo.jpg" alt="Studio 88 Logo">
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h3>SIGN UP TO OUR NEWSLETTER TO STAY UPDATED </h3>
+      <form id="newsletterForm">
+        <input type="email" id="emailInput" placeholder="Enter your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </div>
+
+  <!-- Links -->
+<div class="footer-links">
+  <div class="footer-column">
+    <h4>About Us</h4>
+    <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
+    <a href="about.html">Learn more</a>
+  </div>
+
+  <div class="footer-column">
+    <h4>Contact Us</h4>
+    <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
+    <a href="contact.html">Get in touch</a>
+  </div>
+</div>
+
+    <!-- Social Media -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/studio88_branded/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://x.com/Studio_88" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+
+  </div>
+  <div class= 'rights' >
+    <p>&copy; 2025 Studio 88. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Newsletter Validation Script -->
+<script>
+  const form = document.getElementById("newsletterForm");
+  const emailInput = document.getElementById("emailInput");
+  const message = document.getElementById("newsletterMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    const regex = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+
+    if (!regex.test(email)) {
+      message.textContent = "❌ Please enter a valid email address.";
+      message.style.color = "red";
+    } else {
+      message.textContent = "✅ Thank you for subscribing!";
+      message.style.color = "limegreen";
+      form.reset();
+    }
+   
+
+
+  });
+</script>
+  
   <script src="js/script.js"></script>
   <script src="js/auth.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </body>
 </html>
