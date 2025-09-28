@@ -1,6 +1,9 @@
+// NOTE: This file appears to contain duplicate logic that is already present in `auth.js`.
+// It's recommended to consolidate the sign-up, login, and header update logic into a single file (like `auth.js`)
+// and remove this file to avoid confusion and potential conflicts.
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ------------------ SIGN UP ------------------
   const signupForm = document.getElementById('signup-form');
   const signupMessage = document.getElementById('signup-message');
 
@@ -16,20 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
       signupMessage.style.display = 'block';
 
       if (!fullname || !email || !password || !confirmPassword) {
-        signupMessage.textContent = "❌ Please fill in all fields.";
+        signupMessage.textContent = " Please fill in all fields.";
         signupMessage.style.color = 'red';
         return;
       }
 
       if (password !== confirmPassword) {
-        signupMessage.textContent = "❌ Passwords do not match.";
+        signupMessage.textContent = " Passwords do not match.";
         signupMessage.style.color = 'red';
         return;
       }
 
       const users = JSON.parse(localStorage.getItem('users') || '[]');
       if (users.find(u => u.email === email)) {
-        signupMessage.textContent = "❌ An account with this email already exists.";
+        signupMessage.textContent = " An account with this email already exists.";
         signupMessage.style.color = 'red';
         return;
       }
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       users.push({ fullname, email, password });
       localStorage.setItem('users', JSON.stringify(users));
 
-      signupMessage.textContent = "✅ Sign up successful! Redirecting to login...";
+      signupMessage.textContent = "Sign up successful! Redirecting to login...";
       signupMessage.style.color = 'limegreen';
       signupForm.reset();
 
@@ -47,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ------------------ LOGIN ------------------
   const loginForm = document.getElementById('login-form');
   const loginMessage = document.getElementById('login-message');
 
@@ -61,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loginMessage.style.display = 'block';
 
       if (!email || !password) {
-        loginMessage.textContent = "❌ Please fill in all fields.";
+        loginMessage.textContent = " Please fill in all fields.";
         loginMessage.style.color = 'red';
         return;
       }
@@ -70,14 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const user = users.find(u => u.email === email && u.password === password);
 
       if (!user) {
-        loginMessage.textContent = "❌ Invalid email or password.";
+        loginMessage.textContent = " Invalid email or password.";
         loginMessage.style.color = 'red';
         return;
       }
 
       sessionStorage.setItem('loggedInUser', JSON.stringify(user));
 
-      loginMessage.textContent = "✅ Login successful! Redirecting...";
+      loginMessage.textContent = "Login successful! Redirecting...";
       loginMessage.style.color = 'limegreen';
       loginForm.reset();
 
@@ -87,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ------------------ HEADER LOGGED-IN UPDATE ------------------
   const loggedInUser = sessionStorage.getItem('loggedInUser');
   const nav = document.querySelector('.main-header nav ul');
 

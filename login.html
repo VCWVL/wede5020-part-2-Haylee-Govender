@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <!-- Main Header: Contains Logo, Navigation, and Mobile Menu Toggle -->
   <header class="main-header">
     <a href="index.html" class="logo-container">
       <img src="_images/studiologo.jpg" alt="Studio 88 Logo" class="logo">
     </a>
+    <!-- Main navigation links -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,15 +24,24 @@
             <li><a href="signup.html">Sign Up</a></li>
         </ul>
     </nav>
+    <!-- Hamburger menu icon for mobile -->
     <div class="menu-toggle">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
   </header>
+
+<!-- Main content area with the login form -->
 <main id="Login">
-  <div class="form-container">
+
     <h1>Login</h1>
+    <!-- Introductory text for the login form -->
+    <p class="login-intro">
+  Welcome back! Please log in to access your Studio 88 account and explore our services. 
+  Enter your email and password below to continue.
+</p>
+    <!-- Login form -->
     <form id="login-form">
       <div class="form-group">
         <label for="email">Email</label>
@@ -43,14 +53,15 @@
       </div>
       <button type="submit" class="shop-now">Login</button>
     </form>
+    <!-- Link to the sign-up page for new users -->
     <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
     
-    <!-- Message display -->
+    <!-- Paragraph to display success or error messages from the login attempt -->
     <p id="login-message" class="form-message"></p>
-  </div>
+
 </main>
 
-  
+<!-- Common footer for the website -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -69,32 +80,33 @@
       <p id="newsletterMessage"></p>
     </div>
 
-  <!-- Links -->
-<div class="footer-links">
-  <div class="footer-column">
-    <h4>About Us</h4>
-    <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
-    <a href="about.html">Learn more</a>
-  </div>
-
-  <div class="footer-column">
-    <h4>Contact Us</h4>
-    <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
-    <a href="contact.html">Get in touch</a>
-  </div>
-</div>
-
-    <!-- Social Media -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/studio88_branded/" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://x.com/Studio_88" target="_blank">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
+    <!-- Links & Social Wrapper -->
+    <div class="footer-right-content">
+      <!-- Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
+          <a href="about.html">Learn more</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
+          <a href="contact.html">Get in touch</a>
+        </div>
+      </div>
+      <!-- Social Media -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/studio88_branded/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com/Studio_88" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -105,7 +117,7 @@
   </div>
 </footer>
 
-
+  <!-- JavaScript and Font Awesome resources -->
   <script src="js/script.js"></script>
   <script src="js/auth.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">

@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Main Header: Contains Logo, Navigation, and Mobile Menu Toggle -->
     <header class="main-header">
         <a href="index.html" class="logo-container">
           <img src="_images/studiologo.jpg" alt="Studio 88 Logo" class="logo">
         </a>
+        <!-- Main navigation links -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,6 +24,7 @@
                 <li><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav>
+        <!-- Hamburger menu icon for mobile -->
         <div class="menu-toggle">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -29,11 +32,17 @@
         </div>
     </header>
 
+<!-- Main content of the page -->
 <main>
+    <!-- Introductory section for the Soccer Central page -->
+    <section class="soccer-section">
+       <h1 style="text-align: center;">Soccer Central</h1>
+  <p class="soccer-intro">
+    “Kick off your passion – all the latest soccer news, gear, and action in one place!”
+  </p>
+</section>
 
-    <h1 style="text-align: center;">Soccer Central</h1>
-
-<!-- Soccer Filter Bar -->
+<!-- Soccer Filter Bar: Allows filtering by category (e.g., boots, fan gear) -->
 <div class="filter-bar">
   <label for="soccer-category">Category:</label>
   <select id="soccer-category">
@@ -43,9 +52,10 @@
   </select>
 </div>
 
-    <!-- Soccer Grid -->
+    <!-- Soccer Grid: Displays all soccer-related products -->
   <div class="soccer-grid" id="soccerGrid">
-    <!-- Product 154 -->
+    <!-- Soccer Product Card Example -->
+    <!-- `data-category` attribute is used by JavaScript for filtering -->
     <div class="soccer-card" 
          data-category="fan gear">
       <img src="_images/scc_1.jpg" alt="Jersey">
@@ -552,6 +562,7 @@
   </div>
 </main>
 
+   <!-- Common footer for the website -->
    <footer class="footer">
   <div class="footer-container">
 
@@ -570,32 +581,33 @@
       <p id="newsletterMessage"></p>
     </div>
 
-  <!-- Links -->
-<div class="footer-links">
-  <div class="footer-column">
-    <h4>About Us</h4>
-    <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
-    <a href="about.html">Learn more</a>
-  </div>
-
-  <div class="footer-column">
-    <h4>Contact Us</h4>
-    <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
-    <a href="contact.html">Get in touch</a>
-  </div>
-</div>
-
-    <!-- Social Media -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/studio88_branded/" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://x.com/Studio_88" target="_blank">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
+    <!-- Links & Social Wrapper -->
+    <div class="footer-right-content">
+      <!-- Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
+          <a href="about.html">Learn more</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
+          <a href="contact.html">Get in touch</a>
+        </div>
+      </div>
+      <!-- Social Media -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/studio88_branded/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com/Studio_88" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -605,6 +617,7 @@
     
   </div>
 </footer>
+    <!-- JavaScript and Font Awesome resources -->
     <script src="js/auth.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">

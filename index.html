@@ -9,11 +9,14 @@
 </head>
 <body>
 
+  <!-- Main Header: Contains Logo, Navigation, and Mobile Menu Toggle -->
   <header class="main-header">
     <a href="index.html" class="logo-container">
       <img src="_images/studiologo.jpg" alt="Studio 88 Logo" class="logo">
       <h1 class="brand-title">Welcome to Studio 88</h1>
+    
     </a>
+    <!-- Main navigation links -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,6 +28,7 @@
             <li><a href="signup.html">Sign Up</a></li>
         </ul>
     </nav>
+    <!-- Hamburger menu icon for mobile -->
     <div class="menu-toggle">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -32,7 +36,7 @@
     </div>
   </header>
 
-  <!-- Banner / placeholder -->
+  <!-- Main content of the homepage -->
   <main>
 
   <div style="text-align:center;">
@@ -66,11 +70,10 @@
       <a class="prev">&#10094;</a>
       <a class="next">&#10095;</a>
     </div>
+    
   </div>
 
-<!-- ========================== -->
-<!-- CATEGORIES SECTION -->
-<!-- ========================== -->
+<!-- Categories Section: Links to Men, Women, and Accessories product pages -->
 <section class="categories-section">
   <div class="container">
     <h2 class="categories-title">CATEGORIES</h2>
@@ -98,7 +101,7 @@
 </section>
 
 
-
+<!-- Featured Section: Highlights New Arrivals, Sale, and Soccer Central -->
 <section class="featured-section">
   <div class="featured-container">
     
@@ -132,7 +135,7 @@
 
   </main>
 
-
+<!-- Common footer for the website -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -151,32 +154,33 @@
       <p id="newsletterMessage"></p>
     </div>
 
-  <!-- Links -->
-<div class="footer-links">
-  <div class="footer-column">
-    <h4>About Us</h4>
-    <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
-    <a href="about.html">Learn more</a>
-  </div>
-
-  <div class="footer-column">
-    <h4>Contact Us</h4>
-    <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
-    <a href="contact.html">Get in touch</a>
-  </div>
-</div>
-
-    <!-- Social Media -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/studio88_branded/" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://x.com/Studio_88" target="_blank">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
+    <!-- Links & Social Wrapper -->
+    <div class="footer-right-content">
+      <!-- Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <p>Studio 88 is South Africa’s largest branded fashion retailer, bringing you the latest styles from top international sports and lifestyle brands.</p>
+          <a href="about.html">Learn more</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p>Need assistance? Get in touch with our team for store details, online orders, or general inquiries.</p>
+          <a href="contact.html">Get in touch</a>
+        </div>
+      </div>
+      <!-- Social Media -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/studio88clothing/?_rdc=2&_rdr#" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/studio88_branded/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com/Studio_88" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -185,7 +189,7 @@
   </div>
 </footer>
 
-<!-- Newsletter Validation Script -->
+<!-- Inline script for newsletter form validation -->
 <script>
   const form = document.getElementById("newsletterForm");
   const emailInput = document.getElementById("emailInput");
@@ -204,12 +208,10 @@
       message.style.color = "limegreen";
       form.reset();
     }
-   
-
-
   });
 </script>
   
+  <!-- JavaScript and Font Awesome resources -->
   <script src="js/script.js"></script>
   <script src="js/auth.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
