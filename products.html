@@ -22,6 +22,11 @@
             <li><a href="signup.html">Sign Up</a></li>
         </ul>
     </nav>
+    <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
   </header>
 
 <main>
@@ -29,14 +34,14 @@
   <!-- Filter Bar -->
   <div class="filter-bar">
     <label for="gender">Gender:</label>
-    <select id="gender" onchange="filterItems()">
+    <select id="gender">
       <option value="all">All</option>
       <option value="men">Men</option>
       <option value="women">Women</option>
     </select>
 
     <label for="brand">Brand:</label>
-    <select id="brand" onchange="filterItems()">
+    <select id="brand">
       <option value="all">All</option>
       <option value="nike">Nike</option>
       <option value="adidas">Adidas</option>
@@ -45,7 +50,7 @@
     </select>
 
     <label for="category">Category:</label>
-    <select id="category" onchange="filterItems()">
+    <select id="category">
       <option value="all">All</option>
       <option value="footwear">Footwear</option>
       <option value="clothing">Clothing</option>
@@ -2130,7 +2135,6 @@
            data-gender="women"   
             data-brand="nike"   
             data-category="footwear">
->
             <img src="_images/nike_women9.jpg" alt="Shoes">
       <h3>Nike shoes</h3>
       <p class="price">R2499.99</p>

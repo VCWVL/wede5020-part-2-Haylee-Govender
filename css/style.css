@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
 /* Header */
 .main-header {
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 0px;
+    position: relative; /* Needed for mobile menu positioning */
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    z-index: 1000; /* Ensure header is on top */
     
 }
 
@@ -44,7 +48,75 @@
 
 .main-header nav li {
     display: inline;
-    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Header */
+@media (max-width: 850px) {
+    .main-header .brand-title {
+        font-size: 1.2em; /* Slightly smaller title on mobile */
+    }
+
+    .main-header nav {
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: #111; /* Dark background for dropdown */
+        display: none; /* Hidden by default on mobile */
+    }
+
+    .main-header nav.active {
+        display: block; /* Show when toggled */
+    }
+
+    .main-header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-header nav li {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+
+    .main-header nav a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #333;
+    }
+
+    .main-header nav a:hover {
+        background-color: #222;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header .brand-title {
+        display: none; /* Hide title on very small screens to save space */
+    }
 }
 
 /* Featured 3-column Section */
@@ -113,6 +185,7 @@
 
 .footer-container {
   max-width: 1100px;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -159,6 +232,7 @@
   border-radius: 25px;
   flex: 1;
   min-width: 220px;
+  width: 50%;
   outline: none;
 }
 
@@ -170,6 +244,9 @@
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
+  max-width: 200px;
+  width: 100%;
+  align-self:center;
 }
 
 .newsletter button:hover {
@@ -209,7 +286,7 @@
 }
 
 .footer-column a {
-  color: #06498c;
+  color:#005765;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
@@ -246,10 +323,10 @@
 
 /* Social Media Icons */
 .social-icons {
-  margin-top: 120px;
   display: flex;
   justify-content: center;
   gap: 15px;
+  margin-top: 30px;
   margin-left: 50px;
 }
 
@@ -289,6 +366,15 @@
   .newsletter button {
     width: 100%;
   }
+  .social-icons {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  /* Reduce padding on main content for mobile */
+  main {
+    padding: 0 15px;
+  }
 }
 .rights {
   text-align: center;
@@ -318,21 +404,29 @@ main {
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
+    box-shadow: #0f5c5c;
 }
 
 .product-card img, .new-card img, .sales-card img, .soccer-card img {
     max-width: 100%;
     height: auto;
+    box-shadow: #03363e;
 }
 
 /* Form Styling for Login/Sign Up */
 .form-container {
-    max-width: 450px;
+    max-width: 300px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 0px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .form-container h1 {
@@ -363,11 +457,11 @@ main {
 /* Carousel container */
 .carousel-container {
     position: relative;
-    max-width: 100%;
+    max-width:90%;
     margin: auto;
     overflow: hidden;
-    height: 600px; /* adjust as needed */
-    
+    aspect-ratio: 16 / 9; /* Responsive aspect ratio */
+    background-color: #cfe2ff;
 }
 
 /* Slides */
@@ -393,11 +487,12 @@ main {
 
 /* Slide text content */
 .carousel-content {
-    position: absolute;
-    bottom: 100px;
-    right: 50px;   /* Move to right */
-    left: auto;    /* Remove left alignment */  
-    color: #fff;
+  position: absolute;
+  bottom: 20px; /* Position it closer to the bottom */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Fine-tune the centering */
+  color: #fff;
+  text-align: center; /* Ensure button inside is centered */
 }
 
 .carousel-content h2 {
@@ -422,7 +517,7 @@ main {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: rgb(0, 255, 26);
     font-weight: bold;
     font-size: 24px;
     transition: 0.3s ease;
@@ -446,7 +541,7 @@ main {
 /* Fade animation */
 .fade {
     animation-name: fade;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 @keyframes fade {
@@ -467,7 +562,7 @@ main {
   border-radius: 10px;
   align-items: center;
   box-shadow: 0 2px 8px rgba(48, 174, 191, 0.05);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Labels */
@@ -519,33 +614,35 @@ main {
   gap: 25px;
   margin-top: 20px;
   padding: 0 10px;
+  font-family:"Roboto";
 }
 
 /* ============================= */
 /* Product Card */
 /* ============================= */
 .product-card {
-  background-color: #fff;
+  background-color: #79bdad;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(34, 237, 200, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   padding: 15px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: relative;
 }
 
 /* Hover Effect */
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 173, 161, 0.15);
 }
 
 /* Product Image */
 .product-card img {
   width: 100%;
-  height: 250px; /* bigger images */
+  height: auto; /* Allow height to adjust */
+  aspect-ratio: 1 / 1; /* Creates a square box for the image */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
@@ -615,26 +712,11 @@ main {
   .product-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
   }
-  .product-card img {
-    height: 220px;
-  }
 }
 
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller tablets */
-  }
-  .product-card img {
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
-  }
-  .product-card img {
-    height: 180px;
   }
   .product-card h3 {
     font-size: 14px;
@@ -648,78 +730,13 @@ main {
   }
 }
 
-/* ============================= */
-/* Categories Section - Styled like Products */
-/* ============================= */
-.categories-section {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.categories-section .section-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #333;
-  font-family: 'Arial', sans-serif;
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 per row like product grid */
-  gap: 25px;
-  justify-items: center;
-  align-items: stretch;
-}
-
-/* Category Cards inherit product-card styles */
-.category-card img {
-  width: 100%;
-  height: 250px; /* bigger images */
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.category-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #007bff;
-}
-
-/* Hover effect is already included in product-card */
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Responsive for tablets & mobile */
-@media (max-width: 1024px) {
-  .categories-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .category-card img {
-    height: 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .category-card img {
-    height: 200px;
-  }
-}
-
 @media (max-width: 480px) {
-  .categories-grid {
-    grid-template-columns: 1fr;
-  }
-  .category-card img {
-    height: 180px;
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
   }
 }
+
+
 
 /* ============================= */
 /* Categories Section */
@@ -732,9 +749,8 @@ main {
 .categories-section .categories-title {
   font-size: 32px;
   font-weight: 700;
-  color: #333;
+  color: #000000;
   margin-bottom: 40px;
-  font-family: 'Arial', sans-serif;
 }
 
 /* Grid: 3 per row with nice spacing */
@@ -749,10 +765,10 @@ main {
 /* Category Cards */
 .category-card {
   display: block;
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 173, 225, 0.1);
   text-decoration: none;
   color: #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -761,27 +777,28 @@ main {
 }
 
 .category-card img {
-  width: "100%";
-  height: 490px; /* large image */
-  object-fit: cover;
+  width: 100%;
+  height:auto; 
+  aspect-ratio: 3 / 4; 
+  object-fit: contain;
+  width: 300px;
+
   border-bottom: 1px solid #ddd;
   transition: transform 0.3s ease;
-  
   
 }
 
 .category-card h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #007bff;
+  color: #ffffff;
   margin: 15px 0;
-  font-family: 'Arial', sans-serif;
 }
 
 /* Hover Effect */
 .category-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 25px rgba(0, 158, 166, 0.15);
 }
 
 .category-card:hover img {
@@ -793,6 +810,11 @@ main {
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about-hero {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+
   .category-card img {
     height: 240px;
   }
@@ -806,6 +828,12 @@ main {
   .category-card img {
     height: 200px;
   }
+
+  /* Reduce padding on form containers for mobile */
+  #Enquiry, #Contact, #Login, #SignUp {
+    padding: 30px 20px;
+  }
+
   .categories-section .categories-title {
     font-size: 26px;
   }
@@ -820,11 +848,12 @@ main {
   gap: 80px; /* spacing between cards */
   padding: 30px 50px;
   justify-items: center;
+
 }
 
 /* === Soccer Card Styling === */
 .soccer-card {
-  background: #fff;
+  background: #79bdad;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
@@ -843,9 +872,9 @@ main {
 /* === Soccer Images === */
 .soccer-card img {
   width: 100%;
-  height: 220px;
-  object-fit: contain; /* keeps full image */
-  background: #f4f4f4;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-bottom: 1px solid #eee;
 }
 
@@ -901,7 +930,7 @@ main {
 
 /* === Sales Card Styling === */
 .sales-card {
-  background: #fff;
+  background: #79bdad;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
@@ -920,9 +949,9 @@ main {
 /* === Images === */
 .sales-card img {
   width: 100%;
-  height: 220px;
-  object-fit: contain; /* keeps full image visible */
-  background: #f4f4f4;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-bottom: 1px solid #eee;
 }
 
@@ -981,7 +1010,7 @@ main {
 
 /* === New Card Styling === */
 .new-card {
-  background: #fff;
+  background: #79bdad;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
@@ -1000,9 +1029,9 @@ main {
 /* === Images === */
 .new-card img {
   width: 100%;
-  height: 220px;
-  object-fit: contain; /* keeps full image visible */
-  background: #f4f4f4;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-bottom: 1px solid #eee;
 }
 
@@ -1063,10 +1092,13 @@ main {
 
 /* === About Page Styles === */
 .about-page {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #000000;
   line-height: 1.6;
   padding-bottom: 50px;
+  background: #79bdad;
+  color: #000;
+ 
 }
 
 /* Hero Section */
@@ -1075,9 +1107,11 @@ main {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  padding: 40px 50px;
-  background: #ffffff;
+  padding: 20px 30px;
+  background: #79bdad;
   gap: 30px;
+  width: 70%;
+  max-width: 900px;
 }
 
 
@@ -1090,7 +1124,7 @@ main {
 .about-hero-text h1 {
   font-size: 2.2rem;
   margin-bottom: 15px;
-  color: #005765;
+  color: #000000;
 }
 
 .about-hero-text p {
@@ -1103,13 +1137,17 @@ main {
 .about-follow {
   padding: 20px 30px;
   text-align: center;
+  background: #79bdad;
+    width: 70%;
+  max-width: 900px;
+ 
 }
 
 .about-mission h2,
 .about-experience h2,
 .about-follow h2 {
   font-size: 1.8rem;
-  color: #005765;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1146,28 +1184,19 @@ main {
   }
 }
 
-@media (max-width: 600px) {
-  .about-hero-text h1 {
-    font-size: 1.8rem;
-  }
-  .about-hero-text p {
-    font-size: 1rem;
-  }
-  .about-mission h2,
-  .about-experience h2,
-  .about-follow h2 {
-    font-size: 1.5rem;
-  }
-}
 /* === Global Body Background - Exact Gradient from Your Image === */
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  font-family: 'Arial', sans-serif;
   min-height: 100vh;
   background: linear-gradient(to bottom, #00f0c2 0%, #1a4ee8 100%);
   /* #00f0c2 = top cyan/turquoise, #1a4ee8 = deep blue bottom */
   background-attachment: fixed; /* stays while scrolling */
   color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* === Content Containers === */
@@ -1181,10 +1210,11 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 }
 
 
+
 /* Styles only for the enquiry page */
 #Enquiry {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px 80px;
+  background-color: #ffffff(255, 255, 255, 0.95); /* White with slight transparency */
+  padding: 30px; /* Reduced padding for better mobile view */
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   width: 90%;
@@ -1198,12 +1228,13 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
   color: #333;
   font-size: 2em;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  align-self: center;
 }
 
 #Enquiry form label {
   font-weight: 600;
-  color: #555;
+  color: #000000;
 }
 
 #Enquiry form input,
@@ -1211,7 +1242,7 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
   width: 100%;
   padding: 12px 1px;
   margin-top: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #04978d;
   border-radius: 8px;
   font-size: 1em;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -1233,7 +1264,7 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
   font-size: 1em;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -1277,27 +1308,29 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 /* Contact form styles */
 /* Contact form uses same style as Enquiry */
 #Contact {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px 80px;
+  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  padding: 30px; /* Reduced padding for better mobile view */
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   width: 90%;
   max-width: 500px;
   margin: 50px auto;
+  font-family: 'Roboto', sans-serif;
+  align-self: center;
+  text-align: center;
 }
 
 #Contact h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: #000000;
   font-size: 2em;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
 }
 
 #Contact form label {
   font-weight: 600;
-  color: #555;
+  color: #000000;
 }
 
 #Contact form input,
@@ -1313,8 +1346,8 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 
 #Contact form input:focus,
 #Contact form textarea:focus {
-  border-color: #6BC1FF;
-  box-shadow: 0 0 8px rgba(107, 193, 255, 0.5);
+  border-color: #008f8f;
+  box-shadow: 0 0 8px rgba(2, 89, 152, 0.5);
   outline: none;
 }
 
@@ -1338,28 +1371,29 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 }
 
 #Login {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px 80px;
+  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  padding: 30px; /* Reduced padding for better mobile view */
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   width: 90%;
   max-width: 500px;
-  max-height: 500px;
   margin: 50px auto;
-  font-family: 'Montserrat', sans-serif;
+  align-self: center;
+  text-align: center ;
+  font-family: 'Roboto', sans-serif;
 }
 
 #Login h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: #000000;
   font-size: 2em;
   font-weight: bold;
 }
 
 #Login form label {
   font-weight: 600;
-  color: #555;
+  color: #000000;
 }
 
 #Login form input {
@@ -1374,7 +1408,7 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 }
 
 #Login form input:focus {
-  border-color: #6BC1FF;
+  border-color: #067b8f;
   box-shadow: 0 0 8px rgba(107, 193, 255, 0.5);
   outline: none;
 }
@@ -1405,25 +1439,29 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 }
 
 #Login p a {
-  color: #6BC1FF;
+  color: #06717f;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+ 
 }
 
 #Login p a:hover {
   text-decoration: underline;
+
 }
 
 
 #SignUp {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px 80px;
+  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  padding: 30px; /* Reduced padding for better mobile view */
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   width: 100%;
   max-width: 500px;
-  max-height: 530px;
   margin: 50px auto;
-  font-family: 'Montserrat', sans-serif;
+  align-self: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;;
 }
 
 #SignUp .form-container {
@@ -1432,14 +1470,14 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 #SignUp h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: #000000;
   font-size: 2em;
   font-weight: bold;
 }
 
 #SignUp form label {
   font-weight: 600;
-  color: #555;
+  color: #000000;
 }
 
 #SignUp form input {
@@ -1455,7 +1493,7 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 }
 
 #SignUp form input:focus {
-  border-color: #6BC1FF;
+  border-color: #007078;
   box-shadow: 0 0 8px rgba(107, 193, 255, 0.5);
   outline: none;
 }
@@ -1486,7 +1524,7 @@ section, main, .new-grid, .sales-grid, .product-grid, .soccer-grid {
 }
 
 #SignUp p a {
-  color: #6BC1FF;
+  color: #056982;
   text-decoration: none;
 }
 
