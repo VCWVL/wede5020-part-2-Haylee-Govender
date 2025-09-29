@@ -124,6 +124,20 @@ Part 2:
 
 22 Sep 2025 - Copied part 1 folders and pushed to new repository.
 
+23 Sep 2025 - Readme file done with changes to Proposed Website Features and Functionality, added features for each page in more detail. 
+
+24 Sep 2025 - Second commit to github - Added some styles to navigation and the html for the sign up and login screens. 
+
+28 Sep 2025 - Third commit - Added some of the styles for all screens and filters for product screens.
+
+28 Sept 2025 - Fouth commit - Added more css for all screens and some js code.
+
+28 Sept 2025 - Fifth commit - Edited styles and some html. 
+
+28 Sept 2025 - Sixth commit - Added text content to all screens. Edited styles to ensure inspect works all all devices.
+
+
+
 References 
 
 Studio-88,2025. Studio 88[Online] Available at: < https://www.studio-88.co.za/  > [Accessed on the 5 August 2025].
