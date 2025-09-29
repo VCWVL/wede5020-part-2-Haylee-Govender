@@ -119,7 +119,8 @@ Launch	                              10 Oct 2025
 
 Sitemap: 
 
-<img width="1182" height="1321" alt="image" src="https://github.com/user-attachments/assets/f54912a2-7ae5-495a-8bfd-25dc3c786285" />
+<img width="792" height="882" alt="image" src="https://github.com/user-attachments/assets/3f052c05-ee1e-4194-901f-ea8be0581640" />
+
 
 Changelog: 
 
@@ -298,7 +299,7 @@ cfo,2022. Studio 88 acquisition backs Mr Price’s vision of most valuable retai
 
 startupmag,2025. The Rise of Studio 88: How a Retail Giant Conquered South Africa’s Sneaker and Streetwear Market[Online] Available at: < https://startupmag.co.za/2025/02/the-rise-of-studio-88-how-a-retail-giant-conquered-south-africas-sneaker-and-streetwear-market/ > [Accessed on the 5 August 2025].
 
-Andrey Khusid, Oleg Shardin, 2011.Miro [App]. Available at:< https://miro.com/app/board/uXjVJPB_ZiY=/ > [Accessed on the 20 August 2025]. 
+Andrey Khusid, Oleg Shardin, 2011.Miro [App]. Available at:< https://miro.com/app/board/uXjVJB-dhz4=/  > [Accessed on the 20 August 2025]. 
 
 Ben Silbermann, Paul Sciarra, and Evan Sharp, 2009.Pinterest[App]. Available at: < https://za.pinterest.com/ > [Accessed on the 23 August 2025] 
 
